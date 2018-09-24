@@ -1,0 +1,13 @@
+
+<% if @url %>
+Full Url       : <%= @url.long_url %> <br/><br/>
+Shorten Url : <%= @url.short_url %>
+<% end %>
+
+<br/><br/>
+
+Enter the URL want to short <br/><br/>
+<%= form_for :url_short, url: "home/index", :method => :get do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit "Short" %>
+<% end  %>
